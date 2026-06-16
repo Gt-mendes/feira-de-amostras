@@ -1,0 +1,68 @@
+from ._anvil_designer import tela_finalTemplate
+from anvil import *
+
+class tela_final(tela_finalTemplate):
+  def __init__(self, popularidade, exercito, tesouro, recursos, **properties):
+    
+    super().__init__(**properties)
+
+    """"Importa os valores do form "perguntas" para fazer os cálculos de pontuação
+    e exibir as caixas dos indicadores com a pontuação total"""
+    
+    self.popularidade = popularidade
+    self.tesouro = tesouro
+    self.exercito = exercito
+    self.recursos = recursos
+
+    self.lb_popularidade_final.text = f"👑 Popularidade do Rei: {popularidade}%"
+    self.lb_tesouro_final.text = f"💰 Tesouro real: {tesouro}%"
+    self.lb_exercito_final.text = f"⚔️ Exército: {exercito}%"
+    self.lb_recursos_final.text = f"🌾 Recursos: {recursos}%"
+
+    self.reinadotitulo()
+    self.reinadohistoria()
+
+   
+
+  def reinadotitulo(self):
+
+    #Calcula a pontuação e exibe o título do reino de acordo com a soma 
+
+    pontuacao = ( self.popularidade + self.exercito + self.recursos + self.tesouro)
+  
+    if pontuacao < 180:
+      resultado = "💀 Reino em ruína"
+  
+    elif pontuacao < 240:
+      resultado = "⚔️ Reino Estável"
+  
+    elif pontuacao < 300:
+      resultado = "🏰 Reino próspero"
+  
+    else : 
+      resultado = "👑 Era de Ouro de Valdoria"
+    
+    self.tipo_reino_titulo.text = resultado
+
+  def reinadohistoria(self):
+
+    #Calcula a pontuação e conta uma história do reino de acordo com a soma 
+  
+    pontuacao = ( self.popularidade + self.exercito + self.recursos + self.tesouro)
+  
+    if pontuacao < 160:
+      resultado = "O Crepúsculo de Valdoria\n Ao final de seu reinado, Valdoria encontrava-se enfraquecida por crises sucessivas. Os celeiros estavam vazios, os cofres reais quase sem ouro e a confiança do povo havia desaparecido. Após sua morte, muitos se perguntaram onde as coisas começaram a dar errado. Seu nome permaneceu nos livros de história, mas como um alerta para os futuros governantes."
+  
+    elif pontuacao < 180:
+      resultado = "O Guardião do Reino\n Durante seu governo, Valdoria manteve a ordem e a segurança. O reino não viveu uma era de grande esplendor, mas também não sofreu grandes tragédias. Seu legado foi o de um governante equilibrado, capaz de conduzir seu povo por tempos difíceis sem permitir que o reino desmoronasse."
+  
+    elif pontuacao < 200:
+      resultado = "A Era da Prosperidade\n Sob sua liderança, cidades cresceram, mercados floresceram e as fronteiras permaneceram seguras. O povo viveu anos de relativa abundância e os nobres reconheceram sua capacidade de governar. Seu nome tornou-se sinônimo de competência e progresso, sendo lembrado com respeito por gerações."
+  
+    else : 
+      resultado = "O Rei Lendário\n Seu reinado transformou Valdoria em um dos maiores reinos de sua época. A riqueza encheu os cofres, o exército tornou-se temido por seus inimigos e o povo prosperou sob sua proteção. Séculos depois, bardos ainda cantam suas conquistas e monumentos erguidos em sua homenagem permanecem de pé. Seu nome entrou para a eternidade como o maior governante da história de Valdoria."
+  
+    self.lb_reinado.text = resultado
+    
+
+
