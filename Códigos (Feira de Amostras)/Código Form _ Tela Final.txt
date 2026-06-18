@@ -30,13 +30,13 @@ class tela_final(tela_finalTemplate):
 
     pontuacao = ( self.popularidade + self.exercito + self.recursos + self.tesouro)
   
-    if pontuacao < 180:
+    if pontuacao < 170:
       resultado = "💀 Reino em ruína"
   
-    elif pontuacao < 240:
-      resultado = "⚔️ Reino Estável"
+    elif pontuacao < 230:
+      resultado = "⚖️ Reino instável"
   
-    elif pontuacao < 300:
+    elif pontuacao < 250:
       resultado = "🏰 Reino próspero"
   
     else : 
@@ -50,13 +50,13 @@ class tela_final(tela_finalTemplate):
   
     pontuacao = ( self.popularidade + self.exercito + self.recursos + self.tesouro)
   
-    if pontuacao < 160:
+    if pontuacao < 170:
       resultado = "O Crepúsculo de Valdoria\n Ao final de seu reinado, Valdoria encontrava-se enfraquecida por crises sucessivas. Os celeiros estavam vazios, os cofres reais quase sem ouro e a confiança do povo havia desaparecido. Após sua morte, muitos se perguntaram onde as coisas começaram a dar errado. Seu nome permaneceu nos livros de história, mas como um alerta para os futuros governantes."
   
-    elif pontuacao < 180:
+    elif pontuacao < 230:
       resultado = "O Guardião do Reino\n Durante seu governo, Valdoria manteve a ordem e a segurança. O reino não viveu uma era de grande esplendor, mas também não sofreu grandes tragédias. Seu legado foi o de um governante equilibrado, capaz de conduzir seu povo por tempos difíceis sem permitir que o reino desmoronasse."
   
-    elif pontuacao < 200:
+    elif pontuacao < 260:
       resultado = "A Era da Prosperidade\n Sob sua liderança, cidades cresceram, mercados floresceram e as fronteiras permaneceram seguras. O povo viveu anos de relativa abundância e os nobres reconheceram sua capacidade de governar. Seu nome tornou-se sinônimo de competência e progresso, sendo lembrado com respeito por gerações."
   
     else : 
