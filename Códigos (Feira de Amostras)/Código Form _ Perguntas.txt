@@ -9,10 +9,10 @@ class perguntas(perguntasTemplate):
 
     # Declaração das variáveis antes das escolhas do usuário
 
-    self.popularidade = 70
+    self.popularidade = 50
     self.tesouro = 50
     self.exercito = 50
-    self.recursos = 70
+    self.recursos = 50
 
     self.evento_atual = 0
 
@@ -165,19 +165,19 @@ class perguntas(perguntasTemplate):
 
         "efeitoA": {
 
-          "popularidade": 20,
-          "tesouro": -15,
+          "popularidade": -10,
+          "tesouro": 5,
           "exercito": 0,
-          "recursos": -10
+          "recursos": 10
 
         },
 
         "efeitoB": {
 
-          "popularidade": -10,
-          "tesouro": 5,
+          "popularidade": 20,
+          "tesouro": -15,
           "exercito": 0,
-          "recursos": 10
+          "recursos": -10
 
         }
 
@@ -185,17 +185,17 @@ class perguntas(perguntasTemplate):
 
       { #INICIO DA PERGUNTA 7
 
-        "titulo": "🦠 A Praga Negra",
+        "titulo": "🦠 A Praga",
         "história": "Uma doença desconhecida começa a se espalhar pelas aldeias do sul. Inicialmente afetando apenas alguns moradores, ela rapidamente se transforma em uma ameaça para todo o reino.\nMédicos e curandeiros solicitam recursos para desenvolver tratamentos e montar hospitais improvisados. Os tesoureiros alertam que isso exigirá um grande investimento. \n Como agir?",
         "opcaoA": "Financiar o tratamento dos doentes",
         "opcaoB": "Manter os recursos do reino intactos",
 
         "efeitoA": {
 
-          "popularidade": 20,
-          "tesouro": -15,
-          "exercito": 5,
-          "recursos": -10
+          "popularidade": 25,
+          "tesouro": -10,
+          "exercito": 10,
+          "recursos": -5
 
         },
 
@@ -273,9 +273,9 @@ class perguntas(perguntasTemplate):
 
         "efeitoA": {
 
-          "popularidade": 10,
-          "tesouro": -15,
-          "exercito": 10,
+          "popularidade": 15,
+          "tesouro": -10,
+          "exercito": 15,
           "recursos": 0
 
         },
