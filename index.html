@@ -136,10 +136,10 @@ const eventos = [
 ];
 
 const state = {
-  popularidade: 70,
+  popularidade: 50,
   tesouro: 50,
   exercito: 50,
-  recursos: 70,
+  recursos: 50,
   eventoAtual: 0,
   ultimoEfeito: null,
   tela: "inicial"
@@ -215,14 +215,14 @@ function escolher(key) {
 function renderFinal() {
   const p = state.popularidade + state.tesouro + state.exercito + state.recursos;
   let titulo, historia;
-  if (p < 180) titulo = "💀 Reino em Ruína";
-  else if (p < 240) titulo = "⚔️ Reino Estável";
-  else if (p < 300) titulo = "🏰 Reino Próspero";
+  if (p < 170) titulo = "💀 Reino em Ruína";
+  else if (p < 230) titulo = "⚔️ Reino Estável";
+  else if (p < 250) titulo = "🏰 Reino Próspero";
   else titulo = "👑 Era de Ouro de Valdoria";
 
-  if (p < 160) historia = "O Crepúsculo de Valdoria\n\nAo final de seu reinado, Valdoria encontrava-se enfraquecida por crises sucessivas. Os celeiros estavam vazios, os cofres reais quase sem ouro e a confiança do povo havia desaparecido. Após sua morte, muitos se perguntaram onde as coisas começaram a dar errado. Seu nome permaneceu nos livros de história, mas como um alerta para os futuros governantes.";
-  else if (p < 180) historia = "O Guardião do Reino\n\nDurante seu governo, Valdoria manteve a ordem e a segurança. O reino não viveu uma era de grande esplendor, mas também não sofreu grandes tragédias. Seu legado foi o de um governante equilibrado, capaz de conduzir seu povo por tempos difíceis sem permitir que o reino desmoronasse.";
-  else if (p < 200) historia = "A Era da Prosperidade\n\nSob sua liderança, cidades cresceram, mercados floresceram e as fronteiras permaneceram seguras. O povo viveu anos de relativa abundância e os nobres reconheceram sua capacidade de governar. Seu nome tornou-se sinônimo de competência e progresso, sendo lembrado com respeito por gerações.";
+  if (p < 170) historia = "O Crepúsculo de Valdoria\n\nAo final de seu reinado, Valdoria encontrava-se enfraquecida por crises sucessivas. Os celeiros estavam vazios, os cofres reais quase sem ouro e a confiança do povo havia desaparecido. Após sua morte, muitos se perguntaram onde as coisas começaram a dar errado. Seu nome permaneceu nos livros de história, mas como um alerta para os futuros governantes.";
+  else if (p < 230) historia = "O Guardião do Reino\n\nDurante seu governo, Valdoria manteve a ordem e a segurança. O reino não viveu uma era de grande esplendor, mas também não sofreu grandes tragédias. Seu legado foi o de um governante equilibrado, capaz de conduzir seu povo por tempos difíceis sem permitir que o reino desmoronasse.";
+  else if (p < 250) historia = "A Era da Prosperidade\n\nSob sua liderança, cidades cresceram, mercados floresceram e as fronteiras permaneceram seguras. O povo viveu anos de relativa abundância e os nobres reconheceram sua capacidade de governar. Seu nome tornou-se sinônimo de competência e progresso, sendo lembrado com respeito por gerações.";
   else historia = "O Rei Lendário\n\nSeu reinado transformou Valdoria em um dos maiores reinos de sua época. A riqueza encheu os cofres, o exército tornou-se temido por seus inimigos e o povo prosperou sob sua proteção. Séculos depois, bardos ainda cantam suas conquistas e monumentos erguidos em sua homenagem permanecem de pé. Seu nome entrou para a eternidade como o maior governante da história de Valdoria.";
 
   app.innerHTML = `
